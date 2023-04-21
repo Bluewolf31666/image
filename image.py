@@ -38,7 +38,7 @@ def region_selection(event, x, y, flags, param):
         # 드래그 및 이동시 사각형 위치 update
         image = clone.copy()
         x0, y0, x1, y1 = get_square_coords(x, y, *select_coords[0]) #가변인자(인자의 개수가 정해지지 않은 함수)로 받는다는 뜻
-        cv2.rectangle(image, (x0, y0), (x1, y1), (0, 255, 0), 2) #사각형 표시
+        #cv2.rectangle(image, (x0, y0), (x1, y1), (0, 255, 0), 2) #사각형 표시
 
     elif event == cv2.EVENT_LBUTTONUP: 
         # 마우스를 떘을때, 최종적으로 x,y 업데이트 및 false로 변환
