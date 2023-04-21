@@ -27,3 +27,24 @@ cv2.error: OpenCV(4.7.0) D:\a\opencv-python\opencv-python\opencv\modules\imgcode
 
 * 구체적으로는 string형태와 확장자가 없어서 생긴 에러이다. 제목형태를 맞춰주자
 
+### type error
+
+UnboundLocalError                         Traceback (most recent call last)
+Cell In[21], line 15, in onMouse(event, x, y, flags, param)
+     13 color=(random.randint(0,255),random.randint(0,255),random.randint(0,255))
+     14 #print (color)
+---> 15 str =''.join(map(str,color))
+     16 if event == cv2.EVENT_LBUTTONDOWN:  # 왼쪽 마우스 버튼 다운, 드래그 시작 
+     17     isDragging = True
+
+UnboundLocalError: cannot access local variable 'str' where it is not associated with a value
+
+localvalue에 접근 할수 없는 에러 정확히는 str 함수랑 변수명이 str로 같아서 생긴 에러이다.
+
+### 응답없음
+
+입력이미지 변수명과 크기를 다시 계산해보자.. 
+
+
+## crop error
+
